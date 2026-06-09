@@ -267,7 +267,7 @@ document.getElementById('analyzeBtn').addEventListener('click', async () => {
     const result = await analyzeDoc(text, selectedType);
     lastResult = { ...result, docName, type: selectedType, date: new Date() };
 
-    javascriptdocument.getElementById('resultsMeta').textContent =
+    document.getElementById('resultsMeta').textContent =
       docName + ' · ' + formatDate(lastResult.date);
 
     renderBriefing(document.getElementById('briefingContent'), result);
