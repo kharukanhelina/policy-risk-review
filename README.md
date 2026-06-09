@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Policy Risk Review
 
 An AI-powered tool that identifies blind spots, weaknesses, and unintended consequences in legislation and treaties — built by an international policy and human rights professional.
@@ -120,3 +121,6 @@ This is part of an ongoing project exploring how AI tools can support serious po
 ## License
 
 MIT
+=======
+# policy-risk-review
+>>>>>>> d9ba02dd9998787e80b4fdcab6a75775762d5226
