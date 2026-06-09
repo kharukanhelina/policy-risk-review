@@ -243,11 +243,11 @@ function renderCompareResults(dataA, dataB, insights) {
 
 // ── API Calls ──
 async function analyzeDoc(text, docType) {
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch('/api/analyze', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-5',
       max_tokens: 2000,
       messages: [{ role: 'user', content: buildPrompt(text, docType) }]
     })
@@ -272,11 +272,11 @@ Document B (${nameB}) risks: ${JSON.stringify(resultB.risks.map(r => ({ level: r
 
 Write 3-4 sentences comparing the two documents' risk profiles. Focus on: which has higher overall risk, which categories overlap, and what each document handles better or worse. Plain language, no jargon, no em dashes. Return only the text, no JSON.`;
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch('/api/analyze', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-5',
       max_tokens: 400,
       messages: [{ role: 'user', content: prompt }]
     })
