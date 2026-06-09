@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Policy Risk Review</title>
+  <title>Policy Desk</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -12,7 +12,7 @@
 <body>
 
 <header>
-  <h1>Policy Risk Review</h1>
+  <h1>Policy Desk</h1>
   <div class="mode-toggle">
     <button class="mode-btn active" data-mode="single">Single Document</button>
     <button class="mode-btn" data-mode="compare">Compare Documents</button>
@@ -22,7 +22,7 @@
 
 <main id="appRoot">
 
-  <!-- ── SINGLE MODE ── -->
+  <!-- SINGLE MODE -->
   <div id="singleMode" class="mode-panel active">
     <div class="input-panel">
       <div class="panel-label">Document type</div>
@@ -30,31 +30,27 @@
         <button class="doc-type active" data-type="Legislation">Legislation</button>
         <button class="doc-type" data-type="Treaty">Treaty</button>
       </div>
-
       <div class="panel-label">Upload PDF</div>
       <div class="upload-zone" id="uploadZone">
         <input type="file" id="pdfInput" accept=".pdf" />
-        <div class="upload-icon">⬆</div>
+        <div class="upload-icon">&#11014;</div>
         <div class="upload-label">Drop a PDF or click to browse</div>
         <div class="upload-sub">PDF files only</div>
         <div class="file-name" id="fileName" style="display:none"></div>
       </div>
-
       <div class="divider">or paste text</div>
       <textarea id="docInput" placeholder="Paste document text here..."></textarea>
       <div class="char-count"><span id="charCount">0</span> characters</div>
-
-      <div class="panel-label" style="margin-top:4px">Document name (optional)</div>
+      <div class="panel-label">Document name (optional)</div>
       <input type="text" id="docName" class="doc-name-input" placeholder="e.g. UN Convention on Climate Action 2024" />
-
       <button class="analyze-btn" id="analyzeBtn" disabled>Analyze Document</button>
       <div class="error-msg" id="errorMsg"></div>
     </div>
 
     <div class="output-panel">
       <div class="empty-state" id="emptyState">
-        <div class="empty-icon">⟡</div>
-        <p>Upload a PDF or paste text.<br>Select document type.<br>The tool will return a summary and<br>risk assessment tied to specific provisions.</p>
+        <div class="empty-icon">&#10021;</div>
+        <p>Upload a PDF or paste text.<br>Select document type.<br>Get a structured briefing on what matters.</p>
       </div>
       <div class="loading" id="loadingState">
         <div class="spinner"></div>
@@ -63,14 +59,14 @@
       <div class="results" id="resultsPanel">
         <div class="results-toolbar">
           <div class="results-meta" id="resultsMeta"></div>
-          <button class="export-btn" id="exportBtn">Export PDF Report</button>
+          <button class="export-btn" id="exportBtn">Export PDF</button>
         </div>
         <div class="result-section">
-          <div class="result-section-label">Summary</div>
-          <div class="summary-text" id="summaryText"></div>
+          <div class="result-section-label">Briefing</div>
+          <div id="briefingContent"></div>
         </div>
         <div class="result-section">
-          <div class="result-section-label">Risk Assessment</div>
+          <div class="result-section-label">What It Overlooks</div>
           <div class="risk-list" id="riskList"></div>
         </div>
         <button class="reset-btn" id="resetBtn">Analyze another</button>
@@ -78,11 +74,9 @@
     </div>
   </div>
 
-  <!-- ── COMPARE MODE ── -->
+  <!-- COMPARE MODE -->
   <div id="compareMode" class="mode-panel">
     <div class="compare-grid">
-
-      <!-- Doc A -->
       <div class="compare-input">
         <div class="compare-label">Document A</div>
         <div class="doc-type-row">
@@ -91,7 +85,7 @@
         </div>
         <div class="upload-zone compare-upload" id="uploadZoneA">
           <input type="file" class="compare-pdf-input" data-side="A" accept=".pdf" />
-          <div class="upload-icon">⬆</div>
+          <div class="upload-icon">&#11014;</div>
           <div class="upload-label">Drop PDF or click to browse</div>
           <div class="file-name" id="fileNameA" style="display:none"></div>
         </div>
@@ -99,8 +93,6 @@
         <textarea class="compare-textarea" id="docInputA" placeholder="Paste document A text..."></textarea>
         <input type="text" class="doc-name-input" id="docNameA" placeholder="Document A name (optional)" />
       </div>
-
-      <!-- Doc B -->
       <div class="compare-input">
         <div class="compare-label">Document B</div>
         <div class="doc-type-row">
@@ -109,7 +101,7 @@
         </div>
         <div class="upload-zone compare-upload" id="uploadZoneB">
           <input type="file" class="compare-pdf-input" data-side="B" accept=".pdf" />
-          <div class="upload-icon">⬆</div>
+          <div class="upload-icon">&#11014;</div>
           <div class="upload-label">Drop PDF or click to browse</div>
           <div class="file-name" id="fileNameB" style="display:none"></div>
         </div>
@@ -117,29 +109,29 @@
         <textarea class="compare-textarea" id="docInputB" placeholder="Paste document B text..."></textarea>
         <input type="text" class="doc-name-input" id="docNameB" placeholder="Document B name (optional)" />
       </div>
-
     </div>
-
     <div class="compare-actions">
       <button class="analyze-btn" id="compareBtn" disabled>Compare Documents</button>
       <div class="error-msg" id="compareErrorMsg"></div>
     </div>
-
-    <!-- Compare Results -->
+    <div class="loading" id="compareLoadingState" style="min-height:200px; display:none">
+      <div class="spinner"></div>
+      <p>Analyzing both documents</p>
+    </div>
     <div class="compare-results" id="compareResults" style="display:none">
       <div class="results-toolbar">
         <div class="results-meta" id="compareResultsMeta"></div>
-        <button class="export-btn" id="compareExportBtn">Export Comparison Report</button>
+        <button class="export-btn" id="compareExportBtn">Export Comparison</button>
       </div>
       <div class="compare-results-grid">
         <div class="compare-result-col">
           <div class="compare-col-header" id="colHeaderA">Document A</div>
           <div class="result-section">
-            <div class="result-section-label">Summary</div>
-            <div class="summary-text" id="summaryA"></div>
+            <div class="result-section-label">Briefing</div>
+            <div id="briefingA"></div>
           </div>
           <div class="result-section">
-            <div class="result-section-label">Risk Assessment</div>
+            <div class="result-section-label">What It Overlooks</div>
             <div class="risk-list" id="riskListA"></div>
           </div>
         </div>
@@ -147,30 +139,24 @@
         <div class="compare-result-col">
           <div class="compare-col-header" id="colHeaderB">Document B</div>
           <div class="result-section">
-            <div class="result-section-label">Summary</div>
-            <div class="summary-text" id="summaryB"></div>
+            <div class="result-section-label">Briefing</div>
+            <div id="briefingB"></div>
           </div>
           <div class="result-section">
-            <div class="result-section-label">Risk Assessment</div>
+            <div class="result-section-label">What It Overlooks</div>
             <div class="risk-list" id="riskListB"></div>
           </div>
         </div>
       </div>
-      <div class="result-section" id="compareInsights">
+      <div class="result-section">
         <div class="result-section-label">Comparative Analysis</div>
-        <div class="summary-text" id="insightsText"></div>
+        <div class="briefing-text" id="insightsText"></div>
       </div>
       <button class="reset-btn" id="compareResetBtn">Compare again</button>
-    </div>
-
-    <div class="loading" id="compareLoadingState" style="min-height:200px">
-      <div class="spinner"></div>
-      <p>Analyzing both documents</p>
     </div>
   </div>
 
 </main>
-
 <script src="scripts/app.js"></script>
 </body>
 </html>
