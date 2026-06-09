@@ -17,41 +17,33 @@ RISK_CATEGORIES = [
     "Review Gap",
 ]
 
-PROMPT_TEMPLATE = """You are a policy and legal analyst. Analyze this {doc_type} and identify exactly 5 blind spots or weaknesses — things the document gets wrong, overlooks, or creates unintentionally.
+PROMPT_TEMPLATE = """You are a policy analyst writing a briefing note for a senior professional who needs to act fast.
 
-Return ONLY this JSON, nothing else:
+Analyze this {doc_type} and return exactly this JSON with no extra text:
+
 {{
-  "summary": "3 sentences on what this document does and its scope.",
-  "risks": [
+  "what_changes": "1-2 plain sentences on what is new or different from existing frameworks.",
+  "what_it_overlooks": [
     {{
-      "level": "high or medium or low",
-      "category": "one of: Enforcement Gap | Definitional Ambiguity | Jurisdictional Conflict | Implementation Gap | Human Rights Exposure | Review Gap",
-      "reference": "specific article or section from the document",
-      "description": "3 plain sentences. What is wrong. What happens because of it. What the document fails to achieve as a result."
+      "category": "Enforcement Gap | Definitional Ambiguity | Jurisdictional Conflict | Implementation Gap | Human Rights Exposure | Review Gap",
+      "reference": "specific article or section e.g. Article 4(2)",
+      "gap": "1-2 plain sentences on what this provision misses or gets wrong and why it matters."
     }}
-  ]
+  ],
+  "downstream_effects": "2-3 plain sentences on what concrete actions this document could trigger — new legislation, international negotiations, court cases, policy changes, or compliance obligations.",
+  "what_to_review": "1-2 plain sentences listing specific related laws, treaties, or provisions to read alongside this.",
+  "who_it_affects": "1-2 plain sentences on the key stakeholders and how they are impacted.",
+  "enforcement": "1-2 plain sentences on how this is implemented and what happens if it is not.",
+  "gaps_vs_standards": "1-2 plain sentences on what is missing compared to relevant international standards.",
+  "political_implications": "1-2 plain sentences on the political context and likely reactions."
 }}
 
 Rules:
-- Identify at least 4 risks ordered from highest to lowest severity
-- Every risk must be grounded in a specific provision
-- Focus only on what the document fails to do, overlooks, or creates as an unintended consequence
-- Use only the 6 categories listed above
-- Category-specific rules:
-  * Human Rights Exposure: cite the relevant instrument in brackets e.g. (ICCPR Art. 7), no elaboration
-  * Jurisdictional Conflict: give a concrete example between legal systems or bodies, no specific countries
-  * Enforcement Gap: third sentence states the real consequence in practice, not a future prediction
-  * Implementation Gap: third sentence states the real consequence in practice, not a future prediction
-  * Never name specific countries
-- Risk level hierarchy — never downgrade, only escalate if severe:
-  * Human Rights Exposure → high
-  * Jurisdictional Conflict → high
-  * Enforcement Gap → medium
-  * Implementation Gap → medium
-  * Definitional Ambiguity → low
-  * Review Gap → low
-
-Return ONLY valid JSON. No markdown, no explanation.
+- Plain language only, no jargon, no em dashes, no buzzwords
+- what_it_overlooks must have 3-5 items each tied to a real provision
+- downstream_effects must name concrete actions, not vague possibilities
+- Write like a colleague briefing another colleague before a meeting
+- Return ONLY valid JSON, no markdown
 
 DOCUMENT:
 {text}"""
@@ -106,7 +98,7 @@ def analyze(text: str, doc_type: str, api_key: str = None) -> dict:
     result = json.loads(clean[start:end])
 
     # Validate structure
-    if "summary" not in result or "risks" not in result:
-        raise ValueError("Response missing required fields: summary, risks")
+    if "what_changes" not in result or "what_it_overlooks" not in result:
+        raise ValueError("Response missing required fields.")
 
     return result

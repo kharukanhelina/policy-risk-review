@@ -59,8 +59,7 @@ def cmd_analyze(args):
         "source_file": str(file_path),
         "analyzed_at": datetime.datetime.utcnow().isoformat() + "Z",
         "char_count": len(text),
-        "summary": result["summary"],
-        "risks": result["risks"],
+        **result,
     }
 
     # Save to data/processed/
@@ -72,12 +71,11 @@ def cmd_analyze(args):
     out_path.write_text(json.dumps(record, indent=2, ensure_ascii=False), encoding="utf-8")
 
     print(f"[3/3] Saved result to: {out_path}")
-    print(f"\nSummary:\n{record['summary']}")
-    print(f"\nRisks identified: {len(record['risks'])}")
-    for risk in record["risks"]:
-        level_label = risk["level"].upper().ljust(6)
-        print(f"  [{level_label}] {risk['category']} — {risk['reference']}")
-    print(f"\nDone. Open the frontend to view the full report.")
+    print(f"\nWhat changes:\n{record.get('what_changes', '')}")
+    print(f"\nWhat it overlooks:\n{record.get('what_it_overlooks', '')}")
+    print(f"\nDownstream effects:\n{record.get('downstream_effects', '')}")
+    print(f"\nWhat to review:\n{record.get('what_to_review', '')}")
+    print(f"\nDone.")
 
 
 def cmd_list(args):
@@ -91,16 +89,15 @@ def cmd_list(args):
         print("No analyses found.")
         return
 
-    print(f"\n{'Document':<40} {'Type':<12} {'Risks':<6} {'Date'}")
-    print("-" * 80)
+    print(f"\n{'Document':<40} {'Type':<12} {'Date'}")
+    print("-" * 70)
     for f in files:
         try:
             data = json.loads(f.read_text(encoding="utf-8"))
             name = data.get("doc_name", f.stem)[:38]
             dtype = data.get("doc_type", "?")
-            risks = len(data.get("risks", []))
             date = data.get("analyzed_at", "")[:10]
-            print(f"{name:<40} {dtype:<12} {risks:<6} {date}")
+            print(f"{name:<40} {dtype:<12} {date}")
         except Exception:
             print(f"{f.name} (could not read)")
 

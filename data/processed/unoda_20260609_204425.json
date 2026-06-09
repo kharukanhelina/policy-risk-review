@@ -1,0 +1,41 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T20:44:25.488490Z",
+  "char_count": 16259,
+  "what_changes": "This treaty created a two-tier system where five states that tested nuclear weapons before 1967 are recognized as nuclear weapon states, while all others are prohibited from acquiring them. It established mandatory IAEA safeguards for non-nuclear weapon states and promised peaceful nuclear technology sharing in exchange for non-proliferation commitments.",
+  "what_it_overlooks": [
+    {
+      "category": "Definitional Ambiguity",
+      "reference": "Article I and II",
+      "gap": "The treaty does not define what constitutes a nuclear weapon state, locking in 1967 as the cutoff date without stating it explicitly. This creates permanent inequality and no pathway for the five recognized nuclear powers to lose that status even if they disarm."
+    },
+    {
+      "category": "Enforcement Gap",
+      "reference": "Article III(1)",
+      "gap": "The treaty requires non-nuclear weapon states to accept IAEA safeguards but provides no enforcement mechanism if a state refuses inspections or is found in violation beyond referring the matter to the UN Security Council, where nuclear weapon states have veto power. This means violators can be protected by their allies."
+    },
+    {
+      "category": "Implementation Gap",
+      "reference": "Preamble and Article VI (referenced intent)",
+      "gap": "The preamble declares intention to achieve nuclear disarmament at the earliest possible date but sets no timeline, benchmarks, or binding obligations on nuclear weapon states to actually disarm. After 55 years, all five original nuclear powers still possess nuclear weapons with no accountability mechanism."
+    },
+    {
+      "category": "Jurisdictional Conflict",
+      "reference": "Article IV(1)",
+      "gap": "The treaty guarantees an inalienable right to peaceful nuclear energy but does not address dual-use technology like uranium enrichment and plutonium reprocessing, which are identical to weapons production processes. States can legally approach the threshold of weapons capability while claiming peaceful purposes."
+    },
+    {
+      "category": "Review Gap",
+      "reference": "Article X(2) (withdrawal provision)",
+      "gap": "Any party can withdraw with just three months notice if it decides extraordinary events have jeopardized its supreme interests, with no definition of what qualifies or any dispute resolution process. North Korea used this provision in 2003, showing the treaty cannot prevent determined proliferators from leaving legally."
+    }
+  ],
+  "downstream_effects": "This treaty requires non-nuclear weapon state parties to negotiate and implement comprehensive safeguards agreements with the IAEA within specific timeframes, triggering bilateral negotiations and domestic legislation to allow inspections. It obligates nuclear supplier states to require IAEA safeguards as a condition of nuclear exports, leading to the creation of the Nuclear Suppliers Group and export control laws in dozens of countries. Violations or suspected violations trigger Security Council referrals, as seen with Iran and North Korea, leading to sanctions regimes, international negotiations, and in some cases military threats.",
+  "what_to_review": "Read the IAEA Statute and INFCIRC/153 on comprehensive safeguards agreements to understand the inspection regime this treaty references. Review UN Security Council resolutions on Iran and North Korea to see how treaty violations are handled in practice, and check the Treaty on the Prohibition of Nuclear Weapons (2017) which challenges this treaty's two-tier structure.",
+  "who_it_affects": "The five nuclear weapon states (US, Russia, UK, France, China) retain their arsenals and avoid mandatory inspections while gaining legal authority to control nuclear trade. The 186 non-nuclear weapon state parties accept inspections and forfeit the weapons option in exchange for promised access to peaceful nuclear technology and an unfulfilled disarmament commitment from the nuclear powers. States outside the treaty (India, Pakistan, Israel, North Korea after withdrawal) face no treaty obligations but encounter international export controls and varying degrees of isolation.",
+  "enforcement": "Non-nuclear weapon states must accept IAEA inspections under safeguards agreements negotiated within 18 months of joining, with inspectors verifying nuclear material is not diverted to weapons. If violations are detected, the IAEA reports to the UN Security Council, which can impose sanctions, but enforcement depends entirely on political will since the five permanent Security Council members are the treaty's nuclear weapon states with veto power.",
+  "gaps_vs_standards": "Unlike modern arms control treaties, this lacks verification provisions for nuclear weapon states, has no timelines or milestones for disarmament, and contains no dispute resolution mechanism. The withdrawal clause is weaker than later treaties like the Chemical Weapons Convention, which includes challenge inspections and does not allow the same easy exit.",
+  "political_implications": "This treaty institutionalized a nuclear hierarchy that developing countries increasingly view as discriminatory, especially as the nuclear weapon states modernize rather than eliminate their arsenals. The bargain trading non-proliferation for disarmament and technology access is seen as broken, fueling support for the 2017 prohibition treaty and resistance to strengthened safeguards, while nuclear weapon states defend the treaty as essential to preventing wider proliferation despite their own non-compliance with disarmament commitments."
+}

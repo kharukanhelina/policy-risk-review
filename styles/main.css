@@ -346,3 +346,26 @@ textarea:focus { border-color: #2a2a45; }
   .byline { display: none; }
   #appRoot { padding: 20px; }
 }
+
+/* ── Briefing Blocks ── */
+.briefing-block {
+  padding: 16px 0;
+  border-bottom: 1px solid #1e1e35;
+}
+
+.briefing-block:last-child { border-bottom: none; }
+
+.briefing-label {
+  font-size: 10px !important;
+  letter-spacing: 3px !important;
+  text-transform: uppercase !important;
+  color: #6272f5 !important;
+  margin-bottom: 8px;
+}
+
+.briefing-text {
+  font-size: 14px !important;
+  line-height: 1.8;
+  color: #ffffff !important;
+  font-weight: 300;
+}

@@ -184,8 +184,49 @@ function renderSingleResults(data) {
   const meta = document.getElementById('resultsMeta');
   meta.textContent = `${data.docName} · ${data.type} · ${formatDate(data.date)}`;
 
-  document.getElementById('summaryText').textContent = data.summary;
-  renderRiskList(document.getElementById('riskList'), data.risks);
+  // Clear previous results
+  const summary = document.getElementById('summaryText');
+  const riskListEl = document.getElementById('riskList');
+  summary.innerHTML = '';
+  riskListEl.innerHTML = '';
+
+  // Briefing sections
+  const sections = [
+    { key: 'what_changes', label: 'What Changes' },
+    { key: 'who_it_affects', label: 'Who It Affects' },
+    { key: 'enforcement', label: 'Enforcement Mechanism' },
+    { key: 'downstream_effects', label: 'Downstream Effects' },
+    { key: 'gaps_vs_standards', label: 'Gaps vs International Standards' },
+    { key: 'political_implications', label: 'Political Implications' },
+    { key: 'what_to_review', label: 'What to Review' },
+  ];
+
+  sections.forEach(({ key, label }) => {
+    if (!data[key]) return;
+    const block = document.createElement('div');
+    block.className = 'briefing-block';
+    block.innerHTML = `
+      <div class="briefing-label">${label}</div>
+      <div class="briefing-text">${data[key]}</div>
+    `;
+    summary.appendChild(block);
+  });
+
+  // What it overlooks — structured list
+  if (data.what_it_overlooks && data.what_it_overlooks.length) {
+    data.what_it_overlooks.forEach(item => {
+      const el = document.createElement('div');
+      el.className = 'risk-item medium';
+      el.innerHTML = `
+        <div class="risk-header">
+          <div class="risk-category">${item.category}</div>
+          <div class="risk-reference">${item.reference}</div>
+        </div>
+        <div class="risk-text">${item.gap}</div>
+      `;
+      riskListEl.appendChild(el);
+    });
+  }
 
   document.getElementById('resultsPanel').classList.add('visible');
 }

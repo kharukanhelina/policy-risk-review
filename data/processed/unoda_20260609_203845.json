@@ -1,0 +1,15 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T20:38:45.407969Z",
+  "char_count": 16259,
+  "what_changes": "This treaty created a two-tier system where five states that had nuclear weapons by 1967 could keep them, while all other parties agreed never to acquire them. In exchange, nuclear weapon states committed to eventual disarmament and all parties gained rights to peaceful nuclear technology with IAEA verification.",
+  "what_it_overlooks": "The treaty has no definition of what counts as progress toward disarmament by nuclear weapon states and no binding timeline for them to eliminate their arsenals. It also does not address states that never joined the treaty or those that might withdraw after developing weapons.",
+  "downstream_effects": "Non-nuclear weapon states must negotiate safeguards agreements with the IAEA within 180 days of joining and allow inspections of all peaceful nuclear activities. Nuclear weapon states must refuse any assistance to non-nuclear weapon states seeking to acquire nuclear weapons and cannot transfer weapons or control over them.",
+  "what_to_review": "Review the IAEA Statute and safeguards agreements, the 1963 Partial Test Ban Treaty, and the UN Charter provisions on use of force. Also check the treaty's review conference outcomes since 1970 for how obligations have been interpreted.",
+  "who_it_affects": "The five recognized nuclear weapon states (US, Russia, UK, France, China) retain their arsenals but face disarmament expectations. All other parties forfeit the option to develop nuclear weapons but gain access to peaceful nuclear technology and must accept IAEA inspections.",
+  "enforcement": "Non-nuclear weapon states face IAEA inspections and must report nuclear materials, with violations referred to the UN Security Council. However, there are no automatic penalties in the treaty itself, and any state can withdraw with 90 days notice if it decides supreme interests are jeopardized.",
+  "gaps_vs_standards": "Unlike later arms control treaties, this lacks verification measures for nuclear weapon states' disarmament commitments and has no compliance mechanism beyond Security Council referral. It also predates modern standards on transparency, challenge inspections, and irreversible disarmament steps.",
+  "political_implications": "This treaty locked in 1960s power dynamics by legitimizing five nuclear arsenals while prohibiting all others, creating ongoing tension at review conferences. Non-aligned states and new parties regularly criticize the lack of disarmament progress, while nuclear weapon states resist binding timelines."
+}
