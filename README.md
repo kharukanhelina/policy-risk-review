@@ -1,45 +1,48 @@
-<<<<<<< HEAD
-# Policy Risk Review
+# PolicyDesk
 
-An AI-powered tool that identifies blind spots, weaknesses, and unintended consequences in legislation and treaties — built by an international policy and human rights professional.
+A briefing tool for policy and legal professionals who need to understand what a piece of legislation or treaty actually means — not just what it says.
 
-## What it does
+PolicyDesk surfaces the things that matter when reading a new document: what changes, what it overlooks, who it affects, what it could trigger, and what else you should be reading. No legal definitions, no academic framing — just the broad implications and blind spots a professional needs to act.
 
-Most policy analysis tools summarize what a document intends to do. This tool does the opposite: it reads the document and flags what it gets wrong, overlooks, or creates unintentionally.
+Built by [Anhelina Kharuk](https://www.linkedin.com/in/anhelinakharuk) — international policy and human rights professional, SAIS MAIR, currently working on AI model evaluation at Mercor Intelligence.
 
-Each risk is tied to a specific article, section, or provision and scored across six categories:
+---
 
-| Category | Default Level |
-|---|---|
-| Human Rights Exposure | High |
-| Jurisdictional Conflict | High |
-| Enforcement Gap | Medium |
-| Implementation Gap | Medium |
-| Definitional Ambiguity | Low |
-| Sunset/Review Gap | Low |
+## What it produces
 
-Scores can escalate based on severity but never downgrade — a methodology built on real policy and legal analysis practice.
+For any legislation or treaty, PolicyDesk returns a structured briefing note covering:
+
+- **What changes** — what is new or different from existing frameworks
+- **What it overlooks** — blind spots tied to specific provisions
+- **Downstream effects** — concrete actions this could trigger: legislation, negotiations, court cases, compliance obligations
+- **Who it affects** — key stakeholders and how
+- **Enforcement mechanism** — how it is implemented and what happens if it is not
+- **Gaps vs international standards** — what is missing
+- **Political implications** — context and likely reactions
+- **What to review** — related laws, treaties, and provisions to read alongside it
 
 ---
 
 ## Project Structure
 
 ```
-policy-risk-review/
+policydesk/
 ├── pipeline/
 │   ├── __init__.py
 │   ├── extract.py      — extracts text from PDF and TXT files
-│   ├── analyze.py      — calls Claude API, returns structured risk JSON
+│   ├── analyze.py      — calls Claude API, returns structured briefing JSON
 │   └── cli.py          — command-line interface
+├── api/
+│   └── analyze.js      — Vercel serverless function (API proxy)
 ├── data/
-│   ├── raw/            — place your source documents here
-│   └── processed/      — analysis outputs saved as JSON
-├── frontend/
-│   ├── index.html
-│   ├── styles/main.css
-│   └── scripts/app.js
+│   ├── raw/            — place source documents here
+│   └── processed/      — briefing outputs saved as JSON
+├── styles/
+│   └── main.css
+├── scripts/
+│   └── app.js
+├── index.html
 ├── requirements.txt
-├── README.md
 └── .gitignore
 ```
 
@@ -49,8 +52,8 @@ policy-risk-review/
 
 **1. Clone the repo**
 ```bash
-git clone https://github.com/kharukanhelina/policy-risk-review
-cd policy-risk-review
+git clone https://github.com/kharukanhelina/policydesk
+cd policydesk
 ```
 
 **2. Create a virtual environment**
@@ -67,8 +70,7 @@ pip install -r requirements.txt
 
 **4. Set your Anthropic API key**
 ```bash
-export ANTHROPIC_API_KEY=your_key_here   # Mac/Linux
-set ANTHROPIC_API_KEY=your_key_here      # Windows
+export ANTHROPIC_API_KEY=your_key_here
 ```
 
 ---
@@ -77,14 +79,11 @@ set ANTHROPIC_API_KEY=your_key_here      # Windows
 
 **Analyze a document:**
 ```bash
-python -m pipeline.cli analyze --file data/raw/your_document.pdf --type legislation
-```
-
-```bash
+python -m pipeline.cli analyze --file data/raw/document.pdf --type legislation
 python -m pipeline.cli analyze --file data/raw/treaty.pdf --type treaty --name "UN Convention on X"
 ```
 
-**List all processed analyses:**
+**List all analyses:**
 ```bash
 python -m pipeline.cli list
 ```
@@ -95,32 +94,22 @@ Results are saved as JSON in `data/processed/`.
 
 ## Frontend
 
-Open `index.html` in your browser to use the interactive tool directly — upload PDFs, paste text, compare two documents side by side, and export PDF reports.
+Open `index.html` in your browser or visit the live deployment.
 
-No build step required.
+Features: upload PDF or paste text, compare two documents side by side, export briefing as PDF.
 
 ---
 
 ## Built with
 
-- [Claude API](https://anthropic.com) — AI analysis (claude-sonnet-4-20250514)
-- [pypdf](https://pypdf.readthedocs.io) — PDF text extraction (Python pipeline)
-- [PDF.js](https://mozilla.github.io/pdf.js/) — PDF extraction (frontend)
-- [jsPDF](https://github.com/parallax/jsPDF) — PDF report export
-- [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) — Typography
-- Python 3.9+ · Vanilla HTML/CSS/JS
+- [Claude API](https://anthropic.com) — AI analysis (claude-sonnet-4-5)
+- [pypdf](https://pypdf.readthedocs.io) — PDF text extraction
+- [PDF.js](https://mozilla.github.io/pdf.js/) — frontend PDF handling
+- [jsPDF](https://github.com/parallax/jsPDF) — PDF export
+- Python 3.9+ · Vanilla HTML/CSS/JS · Vercel
 
 ---
-
-## Background
-
-Built by [Anhelina Kharuk](https://www.linkedin.com/in/anhelinakharuk) — international policy and human rights professional, SAIS MAIR, currently working on AI model evaluation at Mercor Intelligence.
-
-This is part of an ongoing project exploring how AI tools can support serious policy and legal work.
 
 ## License
 
 MIT
-=======
-# policy-risk-review
->>>>>>> d9ba02dd9998787e80b4fdcab6a75775762d5226
