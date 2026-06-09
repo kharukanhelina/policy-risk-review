@@ -1,0 +1,59 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T19:07:58.485670Z",
+  "char_count": 16259,
+  "summary": "The Nuclear Non-Proliferation Treaty (NPT) establishes a framework to prevent the spread of nuclear weapons by dividing states into nuclear-weapon and non-nuclear-weapon categories. It requires non-nuclear-weapon states to accept IAEA safeguards while guaranteeing their right to peaceful nuclear technology. The Treaty commits nuclear-weapon states not to transfer weapons while declaring an intention toward eventual disarmament.",
+  "risks": [
+    {
+      "level": "high",
+      "category": "Enforcement Gap",
+      "reference": "Article I and Article II",
+      "description": "The Treaty prohibits transfer and acquisition of nuclear weapons but contains no enforcement mechanism, penalties, or consequences for violation. States can simply withdraw or violate provisions without facing legal sanctions specified in the Treaty itself. The prohibition therefore depends entirely on voluntary compliance and external political pressure rather than enforceable legal consequences.",
+      "citation": ""
+    },
+    {
+      "level": "high",
+      "category": "Jurisdictional Conflict",
+      "reference": "Article III(1)",
+      "description": "The Treaty delegates verification authority to IAEA safeguards agreements negotiated separately with each state but provides no resolution mechanism when a state disputes IAEA inspection findings or access. A non-nuclear-weapon state could challenge IAEA jurisdiction under its own constitutional law or claim sovereign immunity over military facilities while the Treaty offers no binding arbitration process. Verification therefore stalls when national sovereignty claims conflict with international inspection authority.",
+      "citation": ""
+    },
+    {
+      "level": "high",
+      "category": "Definitional Ambiguity",
+      "reference": "Article I and Article II",
+      "description": "The Treaty prohibits transfer of nuclear weapons or other nuclear explosive devices but never defines what constitutes a nuclear weapon, nuclear explosive device, or the threshold components that trigger prohibition. States can transfer weapons-grade materials, delivery systems, triggering mechanisms, or technical expertise while claiming they have not transferred a complete weapon. The core prohibition therefore becomes unenforceable because parties can exploit the undefined boundary between prohibited weapons and permitted technology.",
+      "citation": ""
+    },
+    {
+      "level": "medium",
+      "category": "Implementation Gap",
+      "reference": "Article III(4)",
+      "description": "Non-nuclear-weapon states must conclude safeguards agreements within specified timeframes but the Treaty provides no consequence if a state misses the 180-day commencement deadline or the 18-month completion deadline. A state can delay negotiations indefinitely while technically remaining a party to the Treaty and claiming its benefits under Article IV. States therefore operate without safeguards oversight while enjoying full treaty membership.",
+      "citation": ""
+    },
+    {
+      "level": "medium",
+      "category": "Enforcement Gap",
+      "reference": "Preamble and Treaty body",
+      "description": "The Preamble declares intention to achieve cessation of the nuclear arms race and nuclear disarmament at the earliest possible date but no article creates binding disarmament obligations, timelines, or verification for nuclear-weapon states. Nuclear-weapon states face no legal requirement to reduce arsenals or demonstrate progress toward the stated disarmament objective. The Treaty therefore permits indefinite nuclear weapons possession by recognized nuclear-weapon states without accountability.",
+      "citation": ""
+    },
+    {
+      "level": "low",
+      "category": "Definitional Ambiguity",
+      "reference": "Article IV(1)",
+      "description": "The Treaty guarantees the inalienable right to develop nuclear energy for peaceful purposes but never defines what constitutes a peaceful purpose or distinguishes it from weapons-related activity. Uranium enrichment and plutonium reprocessing serve both civilian energy and weapons programs yet the Treaty provides no criteria for determining when peaceful activity crosses into prohibited weapons development. States can therefore advance weapons capability while claiming protection under the peaceful purposes right.",
+      "citation": ""
+    },
+    {
+      "level": "low",
+      "category": "Sunset/Review Gap",
+      "reference": "Treaty body",
+      "description": "The Treaty contains no mandatory review or sunset provision in its operative articles requiring parties to assess effectiveness or adapt to technological changes. While practice has established review conferences, the Treaty text itself imposes no obligation to evaluate whether the framework remains adequate as weapons technology, delivery systems, and dual-use applications evolve. The legal framework therefore becomes static while the technological and geopolitical landscape it regulates transforms.",
+      "citation": ""
+    }
+  ]
+}

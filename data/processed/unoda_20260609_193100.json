@@ -1,0 +1,45 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T19:31:00.340204Z",
+  "char_count": 16259,
+  "summary": "This Treaty establishes a framework to prevent the spread of nuclear weapons by prohibiting nuclear-weapon states from transferring weapons and non-nuclear-weapon states from acquiring them, while promoting peaceful nuclear energy cooperation under IAEA safeguards. It creates a two-tier system distinguishing nuclear-weapon states from non-nuclear-weapon states and mandates verification through IAEA agreements. The Treaty aims to balance non-proliferation obligations with the right to develop peaceful nuclear technology.",
+  "risks": [
+    {
+      "level": "high",
+      "category": "Jurisdictional Conflict",
+      "reference": "Article III.1 and Article IV.1",
+      "description": "The Treaty creates conflicting authority between the IAEA safeguards system and national sovereignty over peaceful nuclear programs, with no clear hierarchy when disputes arise over what constitutes legitimate peaceful use versus weapons development. A state could claim enrichment or reprocessing falls under its inalienable right to peaceful nuclear energy while the IAEA or other parties view it as weapons-related activity. The Treaty provides no binding arbitration mechanism to resolve such fundamental interpretive conflicts between national rights and international verification.",
+      "example": "between IAEA inspection authority and domestic nuclear regulatory bodies"
+    },
+    {
+      "level": "high",
+      "category": "Enforcement Gap",
+      "reference": "Articles I and II",
+      "description": "The Treaty prohibits transfer and acquisition of nuclear weapons but establishes no enforcement mechanism, penalties, or consequences for violation beyond what exists in general international law. States can violate the core prohibitions and face only political consequences or voluntary Security Council action, not automatic Treaty-based sanctions. Violators can develop weapons programs while remaining parties or simply withdraw, rendering the central prohibitions unenforceable in practice.",
+      "consequence": "States pursue clandestine weapons programs with impunity"
+    },
+    {
+      "level": "medium",
+      "category": "Implementation Gap",
+      "reference": "Article III.4",
+      "description": "The Treaty requires non-nuclear-weapon states to conclude safeguards agreements within specified timeframes but provides no mechanism if states fail to negotiate or implement these agreements. The 180-day and 18-month deadlines are aspirational with no consequences for non-compliance or indefinite delay. States can remain parties while avoiding safeguards obligations, creating a verification vacuum for their nuclear activities.",
+      "consequence": "Multiple states operate without comprehensive safeguards agreements decades after ratification"
+    },
+    {
+      "level": "medium",
+      "category": "Definitional Ambiguity",
+      "reference": "Article I and Article II",
+      "description": "The Treaty fails to define what constitutes a \"nuclear-weapon State\" beyond implicit reference to possession at an unspecified date, creating ambiguity about the status of states that acquire weapons after the Treaty's adoption. No provision addresses whether states developing weapons post-1968 are nuclear-weapon states with Article I obligations or non-nuclear-weapon states in violation of Article II. This definitional gap allows states to claim ambiguous status or argue their weapons development occurred outside the Treaty framework.",
+      "consequence": "States with post-1968 weapons programs occupy undefined legal status"
+    },
+    {
+      "level": "low",
+      "category": "Review Gap",
+      "reference": "Entire Treaty text",
+      "description": "The Treaty contains no provision for mandatory periodic review, amendment procedures, or assessment of whether parties are fulfilling disarmament obligations referenced in the Preamble. The document lacks mechanisms to evaluate progress toward stated goals like cessation of the arms race or nuclear disarmament. Without structured review, the Treaty cannot adapt to technological changes or hold parties accountable for long-term commitments beyond non-proliferation.",
+      "consequence": "No formal mechanism exists to assess Treaty effectiveness"
+    }
+  ]
+}

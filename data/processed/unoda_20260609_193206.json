@@ -1,0 +1,44 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T19:32:06.020831Z",
+  "char_count": 16259,
+  "summary": "This Treaty establishes a framework to prevent the spread of nuclear weapons by prohibiting nuclear-weapon states from transferring weapons and non-nuclear-weapon states from acquiring them, while promoting peaceful nuclear energy cooperation under IAEA safeguards. It creates a two-tier system distinguishing nuclear-weapon states from non-nuclear-weapon states and mandates verification through IAEA agreements. The Treaty includes provisions for peaceful nuclear technology sharing and references future disarmament objectives.",
+  "risks": [
+    {
+      "level": "high",
+      "category": "Jurisdictional Conflict",
+      "reference": "Article III, paragraphs 1 and 4",
+      "description": "The Treaty requires non-nuclear-weapon states to negotiate separate safeguards agreements with the IAEA within specified timeframes, but provides no mechanism to resolve conflicts between IAEA safeguards interpretations and domestic nuclear regulatory authorities. A state could face contradictory compliance requirements where its national nuclear safety regulator permits activities that IAEA inspectors deem inconsistent with safeguards obligations. The Treaty creates overlapping authority without establishing which body's interpretation prevails in disputes.",
+      "example": "Conflict between IAEA safeguards interpretation and domestic nuclear regulatory authority over dual-use facility classification"
+    },
+    {
+      "level": "medium",
+      "category": "Enforcement Gap",
+      "reference": "Articles I and II",
+      "description": "The Treaty prohibits transfer and acquisition of nuclear weapons but establishes no enforcement mechanism, sanctions regime, or consequences for violation beyond what exists in the UN Charter. States that violate Articles I or II face no Treaty-specific penalties, relying entirely on Security Council action which can be vetoed by permanent members. Violating states continue as parties with full rights under Article IV while facing no automatic legal consequences under the Treaty itself.",
+      "consequence": "States withdraw or violate provisions without facing Treaty-based penalties"
+    },
+    {
+      "level": "medium",
+      "category": "Implementation Gap",
+      "reference": "Article IV, paragraph 1",
+      "description": "The Treaty guarantees an inalienable right to peaceful nuclear energy but provides no criteria to distinguish peaceful nuclear programs from weapons-adjacent capabilities like enrichment and reprocessing. States can develop complete fuel cycle capabilities including weapons-usable materials while claiming Article IV protections. The Treaty creates a legal right without operational boundaries, allowing accumulation of breakout capacity under the guise of peaceful use.",
+      "consequence": "States develop weapons-threshold capabilities while remaining technically compliant"
+    },
+    {
+      "level": "medium",
+      "category": "Enforcement Gap",
+      "reference": "Preamble and entire Treaty structure",
+      "description": "The Treaty contains no definition of nuclear-weapon state status, no accession cutoff date for this classification, and no provision addressing states that acquire weapons after entry into force. States that developed weapons after 1967 exist outside the Treaty's binary classification system. The Treaty fails to establish legal status or obligations for post-Treaty nuclear-armed states, creating a compliance vacuum.",
+      "consequence": "Nuclear-armed non-parties operate outside the Treaty framework entirely"
+    },
+    {
+      "level": "low",
+      "category": "Definitional Ambiguity",
+      "reference": "Articles I and II",
+      "description": "The Treaty prohibits transfer of nuclear weapons and control over such weapons but does not define what constitutes control or indirect transfer. Nuclear sharing arrangements, extended deterrence deployments, or provision of delivery systems could fall within or outside Treaty prohibitions depending on interpretation. The Treaty leaves undefined whether hosting weapons, joint targeting, or dual-capable delivery systems constitute prohibited control transfer."
+    }
+  ]
+}

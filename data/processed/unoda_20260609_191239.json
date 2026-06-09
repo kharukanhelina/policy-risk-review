@@ -1,0 +1,59 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T19:12:39.982615Z",
+  "char_count": 16259,
+  "summary": "The Nuclear Non-Proliferation Treaty (NPT) establishes a framework to prevent the spread of nuclear weapons, promote peaceful nuclear energy cooperation, and advance nuclear disarmament. It divides States into nuclear-weapon States and non-nuclear-weapon States, imposing different obligations on each category. The Treaty mandates IAEA safeguards for non-nuclear-weapon States while preserving their right to peaceful nuclear technology and commits nuclear-weapon States to disarmament efforts.",
+  "risks": [
+    {
+      "level": "high",
+      "category": "Enforcement Gap",
+      "reference": "Articles I and II",
+      "description": "The Treaty prohibits transfer and acquisition of nuclear weapons but provides no enforcement mechanism, penalties, or compliance procedures for violations. States can breach these core prohibitions without facing Treaty-specified consequences, relying entirely on external political will. The Treaty therefore cannot compel compliance with its central non-proliferation obligations.",
+      "severity": "high"
+    },
+    {
+      "level": "high",
+      "category": "Human Rights Exposure",
+      "reference": "Article III(1)",
+      "description": "The Treaty requires non-nuclear-weapon States to accept IAEA safeguards agreements without specifying limits on inspection authority, duration of inspector presence, or access to sensitive non-nuclear sites. Inspectors could demand prolonged access to civilian research facilities, universities, or private enterprises without clear boundaries or appeal procedures. The Treaty therefore permits inspection regimes that may violate privacy rights and freedom of scientific inquiry (ICCPR Art. 17, ICESCR Art. 15).",
+      "severity": "high"
+    },
+    {
+      "level": "high",
+      "category": "Jurisdictional Conflict",
+      "reference": "Article III(1)",
+      "description": "The Treaty requires safeguards on nuclear activities carried out under a State's control anywhere, creating overlapping authority where host State domestic law, IAEA statute provisions, and Treaty obligations intersect. When a non-nuclear-weapon State conducts nuclear research on another State's territory through a joint venture, three separate legal frameworks could impose conflicting inspection requirements, confidentiality standards, or reporting obligations. The Treaty provides no hierarchy or conflict resolution mechanism among these competing legal authorities.",
+      "severity": "high"
+    },
+    {
+      "level": "medium",
+      "category": "Implementation Gap",
+      "reference": "Article III(4)",
+      "description": "The Treaty establishes a maximum eighteen-month deadline after negotiation starts for safeguards agreements to enter into force but provides no consequence if this deadline passes without agreement. States can indefinitely delay negotiations or refuse to finalize agreements while remaining formal Parties to the Treaty. Non-nuclear-weapon States therefore operate without required safeguards while technically complying with procedural requirements.",
+      "severity": "medium"
+    },
+    {
+      "level": "medium",
+      "category": "Implementation Gap",
+      "reference": "Preamble and Articles I, II",
+      "description": "The Preamble declares intention to achieve cessation of the nuclear arms race and nuclear disarmament at the earliest possible date, but no Treaty article converts this into binding obligations with timelines or measurable commitments. Nuclear-weapon States can maintain and modernize arsenals indefinitely while citing security concerns without violating Treaty text. The Treaty therefore permits perpetual nuclear weapon possession despite its stated disarmament purpose.",
+      "severity": "medium"
+    },
+    {
+      "level": "low",
+      "category": "Definitional Ambiguity",
+      "reference": "Articles I and II",
+      "description": "The Treaty prohibits transfer and receipt of nuclear weapons or other nuclear explosive devices but never defines what constitutes a nuclear weapon, explosive device, or the threshold for control over such items. Emerging technologies like autonomous delivery systems, component sharing arrangements, or artificial intelligence targeting systems blur the line between prohibited weapons and permitted dual-use technology. States can therefore argue that sophisticated weapons-enabling transfers fall outside Treaty prohibitions.",
+      "severity": "low"
+    },
+    {
+      "level": "low",
+      "category": "Definitional Ambiguity",
+      "reference": "Article IV(1)",
+      "description": "The Treaty guarantees the inalienable right to develop nuclear energy for peaceful purposes but provides no definition of what constitutes peaceful purposes or when activities cross into weapons-related research. Uranium enrichment and plutonium reprocessing serve both civilian fuel cycles and weapons programs, creating an undefined boundary. States can therefore pursue weapons-adjacent capabilities while claiming protection under peaceful use provisions.",
+      "severity": "low"
+    }
+  ]
+}

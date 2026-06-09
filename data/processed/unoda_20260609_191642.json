@@ -1,0 +1,16 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T19:16:42.952678Z",
+  "char_count": 16259,
+  "summary": "The Nuclear Non-Proliferation Treaty establishes a framework to prevent the spread of nuclear weapons, promote peaceful uses of nuclear energy, and advance nuclear disarmament. It divides states into nuclear-weapon states and non-nuclear-weapon states, imposing different obligations on each category. The treaty relies on the International Atomic Energy Agency to verify compliance through safeguards agreements.",
+  "risks": [
+    {
+      "level": "low",
+      "category": "Review Gap",
+      "reference": "Entire Treaty",
+      "description": "The treaty contains no provision for periodic review conferences, amendment procedures, or mechanisms to assess compliance or adapt to technological change. The treaty remains static while nuclear technology, delivery systems, and proliferation risks evolve. The treaty therefore cannot respond to developments that render its provisions obsolete or insufficient."
+    }
+  ]
+}

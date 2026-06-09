@@ -1,0 +1,59 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T19:15:25.200983Z",
+  "char_count": 16259,
+  "summary": "The Nuclear Non-Proliferation Treaty establishes a framework to prevent the spread of nuclear weapons, promote peaceful uses of nuclear energy, and advance nuclear disarmament. It divides states into nuclear-weapon states and non-nuclear-weapon states, imposing different obligations on each category. The treaty relies on the International Atomic Energy Agency to verify compliance through safeguards agreements.",
+  "risks": [
+    {
+      "level": "high",
+      "category": "Enforcement Gap",
+      "reference": "Articles I and II",
+      "description": "The treaty prohibits transfer and acquisition of nuclear weapons but contains no enforcement mechanism, penalties, or consequences for violation. States that breach these core obligations face no specified sanctions or remedial procedures within the treaty itself. The treaty therefore relies entirely on external political will to address violations, making the central prohibitions unenforceable in practice.",
+      "severity": "high"
+    },
+    {
+      "level": "high",
+      "category": "Jurisdictional Conflict",
+      "reference": "Article III(1)",
+      "description": "The treaty requires non-nuclear-weapon states to accept IAEA safeguards but does not address conflicts between IAEA inspection authority and domestic sovereignty claims over military or security-sensitive facilities. A state could invoke national security exceptions under its domestic law to deny IAEA access to dual-use facilities, creating a standoff between international verification obligations and national jurisdiction. This produces an unresolvable tension between the IAEA's verification mandate and state sovereignty protections in constitutional or national security law.",
+      "severity": "high"
+    },
+    {
+      "level": "high",
+      "category": "Definitional Ambiguity",
+      "reference": "Articles I and II",
+      "description": "The treaty fails to define what constitutes a nuclear-weapon state, creating ambiguity about which states fall into which category and when that status is acquired. States that developed nuclear weapons after 1968 exist in legal limbo, neither clearly bound by Article I nor Article II obligations. The treaty therefore cannot coherently apply its central framework to states that acquired weapons post-adoption.",
+      "severity": "high"
+    },
+    {
+      "level": "medium",
+      "category": "Implementation Gap",
+      "reference": "Article III(4)",
+      "description": "The treaty requires non-nuclear-weapon states to conclude safeguards agreements within specified timeframes but provides no mechanism if a state fails to negotiate or delays indefinitely. A state can remain nominally compliant with the treaty while avoiding actual safeguards implementation by prolonging negotiations or refusing to finalize agreements. The treaty therefore permits states to enjoy membership benefits while evading verification obligations in practice.",
+      "severity": "medium"
+    },
+    {
+      "level": "medium",
+      "category": "Definitional Ambiguity",
+      "reference": "Article IV(1)",
+      "description": "The treaty guarantees an inalienable right to peaceful nuclear energy but does not define what activities qualify as peaceful or where the boundary lies with weapons-related research. Uranium enrichment and plutonium reprocessing serve both civilian and military purposes, yet the treaty provides no criteria to distinguish permissible from prohibited activities. States can therefore pursue weapons-capable technologies while claiming protection under Article IV.",
+      "severity": "medium"
+    },
+    {
+      "level": "low",
+      "category": "Review Gap",
+      "reference": "Entire Treaty",
+      "description": "The treaty contains no provision for periodic review, amendment procedures, or adaptation mechanisms to address technological changes or emerging proliferation pathways. Developments such as cyber threats to nuclear facilities, non-state actor acquisition risks, or new weapons technologies remain unaddressed by the static treaty text. The treaty therefore becomes progressively less relevant to actual proliferation risks over time.",
+      "severity": "low"
+    },
+    {
+      "level": "low",
+      "category": "Definitional Ambiguity",
+      "reference": "Article I",
+      "description": "The prohibition on assisting non-nuclear-weapon states does not define what constitutes assistance, leaving unclear whether providing dual-use technology, training scientists, or sharing research crosses the threshold. States can transfer knowledge, equipment, or materials that enable weapons development while arguing they fall outside the prohibition. The treaty therefore fails to prevent indirect proliferation through ostensibly civilian cooperation.",
+      "severity": "low"
+    }
+  ]
+}

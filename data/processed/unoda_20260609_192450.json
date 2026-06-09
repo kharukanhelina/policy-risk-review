@@ -1,0 +1,52 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T19:24:50.740219Z",
+  "char_count": 16259,
+  "summary": "This Treaty establishes a framework to prevent the spread of nuclear weapons by prohibiting nuclear-weapon states from transferring weapons and non-nuclear-weapon states from acquiring them, while promoting peaceful nuclear energy cooperation under IAEA safeguards. It creates a two-tier system distinguishing nuclear-weapon states from non-nuclear-weapon states and mandates verification through IAEA agreements. The Treaty aims to balance non-proliferation obligations with the right to develop peaceful nuclear technology and calls for progress toward nuclear disarmament.",
+  "risks": [
+    {
+      "level": "high",
+      "category": "Jurisdictional Conflict",
+      "reference": "Article III.1 and Article IV.1",
+      "description": "The Treaty grants IAEA safeguards authority over peaceful nuclear activities while simultaneously affirming an inalienable right to develop nuclear energy, creating competing jurisdictional claims between national sovereignty and international oversight. When a state claims its nuclear program is peaceful under Article IV but IAEA inspections under Article III reveal ambiguous dual-use activities, no clear hierarchy determines which provision prevails. This produces legal deadlock between domestic courts asserting sovereign energy rights and international tribunals enforcing non-proliferation obligations.",
+      "example": "conflict between national energy regulatory authority and IAEA inspection mandate"
+    },
+    {
+      "level": "high",
+      "category": "Enforcement Gap",
+      "reference": "Article I and Article II",
+      "description": "The Treaty prohibits transfer and acquisition of nuclear weapons but contains no enforcement mechanism, penalties, or compliance procedures within its text. States that violate Articles I or II face no specified consequences, sanctions, or adjudication process under the Treaty itself. Violating states continue operations without legal interruption while the Treaty regime relies entirely on external political pressure that non-parties can ignore.",
+      "example": null
+    },
+    {
+      "level": "medium",
+      "category": "Implementation Gap",
+      "reference": "Preamble declaration on nuclear disarmament and Article VI (referenced but not provided)",
+      "description": "The Preamble declares intention to achieve cessation of the nuclear arms race and undertake effective disarmament measures at the earliest possible date, but establishes no timeline, benchmarks, or binding obligations. Nuclear-weapon states can indefinitely defer disarmament while citing security concerns, with no mechanism to measure or compel progress. Nuclear-weapon states maintain and modernize arsenals over five decades while non-nuclear-weapon states fulfill all Treaty obligations under an increasingly asymmetric bargain.",
+      "example": null
+    },
+    {
+      "level": "medium",
+      "category": "Enforcement Gap",
+      "reference": "Article III.4",
+      "description": "The Treaty requires non-nuclear-weapon states to conclude safeguards agreements with IAEA within specified timeframes but provides no remedy if states miss deadlines or refuse to negotiate. A state can delay negotiations indefinitely, operate unsafeguarded facilities, and remain a Party in good standing without consequence. States operate nuclear programs for years without concluded safeguards agreements while technically complying with the letter of Article III.4 by claiming ongoing negotiations.",
+      "example": null
+    },
+    {
+      "level": "low",
+      "category": "Definitional Ambiguity",
+      "reference": "Article I and Article II",
+      "description": "The Treaty prohibits transfer and acquisition of nuclear weapons and other nuclear explosive devices but never defines what constitutes a nuclear weapon, nuclear explosive device, or the threshold of weapons-grade capability. States can develop enrichment and reprocessing capabilities that bring them to the brink of weapons capability while claiming compliance with peaceful purposes under Article IV. The Treaty cannot distinguish between advanced peaceful programs and weaponization intent, allowing states to remain compliant while achieving breakout capacity.",
+      "example": null
+    },
+    {
+      "level": "low",
+      "category": "Review Gap",
+      "reference": "Entire Treaty text",
+      "description": "The Treaty contains no provision for mandatory periodic review, amendment procedures responsive to technological change, or mechanisms to assess whether the disarmament objectives are being achieved. The Treaty framework remains frozen in 1968 technology and geopolitical assumptions with no formal process to adapt to cyber threats, non-state actors, or new weapons technologies. The Treaty operates with outdated assumptions about weapons technology, delivery systems, and threat landscapes that did not exist when it was drafted.",
+      "example": null
+    }
+  ]
+}

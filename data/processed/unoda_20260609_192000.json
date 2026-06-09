@@ -1,0 +1,22 @@
+{
+  "doc_name": "Unoda",
+  "doc_type": "Treaty",
+  "source_file": "data/raw/UNODA.pdf",
+  "analyzed_at": "2026-06-09T19:20:00.598157Z",
+  "char_count": 16259,
+  "summary": "The Nuclear Non-Proliferation Treaty establishes a framework to prevent the spread of nuclear weapons, promote peaceful uses of nuclear energy, and advance nuclear disarmament. It divides states into nuclear-weapon states and non-nuclear-weapon states, imposing different obligations on each category. The treaty relies on the International Atomic Energy Agency to verify compliance through safeguards agreements.",
+  "risks": [
+    {
+      "level": "high",
+      "category": "Human Rights Exposure",
+      "reference": "Article III(1)",
+      "description": "The treaty grants the IAEA broad inspection authority over all peaceful nuclear activities within a state's territory or under its control anywhere, with no explicit protections for privacy, proprietary information, or limits on intrusive inspections. Inspectors may access sensitive facilities, collect personal data on workers, and monitor activities in ways that interfere with rights to privacy and protection of intellectual property. The treaty therefore fails to safeguard fundamental rights during verification procedures (ICCPR Art. 17)."
+    },
+    {
+      "level": "low",
+      "category": "Review Gap",
+      "reference": "Article III(3)",
+      "description": "The treaty requires safeguards to avoid hampering economic or technological development but establishes no review mechanism to assess whether IAEA safeguards actually meet this standard. States subjected to intrusive or economically damaging inspections have no forum to challenge the proportionality of safeguards measures. The treaty therefore fails to ensure accountability for the balance it mandates between verification and development."
+    }
+  ]
+}
