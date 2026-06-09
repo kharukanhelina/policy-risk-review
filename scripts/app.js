@@ -267,8 +267,8 @@ document.getElementById('analyzeBtn').addEventListener('click', async () => {
     const result = await analyzeDoc(text, selectedType);
     lastResult = { ...result, docName, type: selectedType, date: new Date() };
 
-    document.getElementById('resultsMeta').textContent =
-      docName + ' · ' + selectedType + ' · ' + formatDate(lastResult.date);
+    javascriptdocument.getElementById('resultsMeta').textContent =
+      docName + ' · ' + formatDate(lastResult.date);
 
     renderBriefing(document.getElementById('briefingContent'), result);
     renderOverlooks(document.getElementById('riskList'), result.what_it_overlooks);
